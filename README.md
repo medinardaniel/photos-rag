@@ -1,4 +1,4 @@
-# Daniel's Life - RAG-Powered Image Query Application
+# Daniel's Life: RAG-Powered Image Query Application
 
 This application showcases an innovative approach to visualizing Daniel's life through images, combining advanced NLP and image processing techniques. Users can explore images related to Daniel's experiences by inputting descriptive queries. The application utilizes OpenAI's GPT-4 Vision model, BERT embeddings for semantic search, and MongoDB for data storage, offering a unique glimpse into Daniel's memorable moments.
 
