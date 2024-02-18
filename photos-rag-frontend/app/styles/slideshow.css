@@ -1,0 +1,60 @@
+/* Add to your CSS file */
+.slideshow-container {
+    position: relative;
+    max-width: 600px; /* Adjust based on your layout */
+    margin: auto;
+  }
+
+.image-container {
+    position: relative;
+    max-width: 80%; /* Adjust based on your layout */
+    margin: auto;
+  }
+
+  .image {
+    max-width: 100%; /* Ensures image does not exceed the width of its container */
+    max-height: 500px; /* Adjust this value to your preference */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain; /* Ensures the image is scaled to maintain its aspect ratio while fitting within the element's content box */
+    display: block; /* Removes extra space below the image */
+    margin: 0 auto; /* Centers the image if it's smaller than the container */
+  }
+  
+  .slide {
+    display: none;
+  }
+  
+  .active {
+    display: block;
+  }
+  
+  /* Style the next and previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    width: auto;
+    padding: 16px 0px;
+    margin-top: -22px;
+    color: darkblue;
+    font-weight: bold;
+    font-size: 56px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .caption {
+    text-align: center;
+    padding: 10px 12px;
+  }
+  
