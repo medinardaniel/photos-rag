@@ -41,6 +41,23 @@ To run the frontend, cd into photos-rag-frontend and run 'npm run build' followe
 
 Input a descriptive query about Daniel's life to explore related images. The application processes your query, retrieves relevant images, and displays them with generated captions that enrich the visual experience.
 
+## RAG vs. Non-RAG Evaluation
+
+### Methods
+To evaluate the effectiveness of Retrieval-Augmented Generation (RAG) compared to non-RAG approaches in text generation, we conducted a comprehensive analysis based on the cosine similarity between generated captions and true captions. This involved generating responses to a set of predefined queries using both RAG and non-RAG models, followed by embedding these responses and the true captions to calculate cosine similarity scores, which measure the closeness of the generated captions to the true captions. We compiled these scores for both approaches, calculated the mean and median values to summarize the central tendency of the similarities, and then applied Welch's t-test, a statistical method that does not assume equal variances between groups, to determine if the observed differences in means were statistically significant. The t-test results provided a robust statistical basis to compare the performance of RAG versus non-RAG models, allowing us to draw conclusions about their relative effectiveness in producing text that closely aligns with human-generated captions.
+
+### Analysis
+The statistical analysis conducted on the cosine similarity scores between captions generated with and without the Retrieval-Augmented Generation (RAG) model provides insightful findings. The primary objective was to compare the effectiveness of RAG versus non-RAG approaches in generating captions that are similar to true captions, as measured by cosine similarity.
+
+The results show that the mean cosine similarity score for captions generated without RAG is 0.73, with a median score of 0.74. In contrast, captions generated with RAG achieved a higher mean score of 0.83 and a median of 0.84. This indicates that, on average, RAG-generated captions are more closely aligned with the true captions than those generated without RAG.
+
+To assess the statistical significance of the observed difference in means, Welch's t-test was employed. This test is particularly suitable for this analysis because it does not assume equal variances between the two groups, making it a robust choice for comparing means from independent samples. The t-test yielded a t-statistic of -5.491 and a p-value of 0.000, indicating a statistically significant difference between the two groups.
+
+![RAG vs Non-RAG Comparison](rag-vs-nonrag.png)
+
+### Conclusion
+The statistical analysis conclusively demonstrates that the Retrieval-Augmented Generation (RAG) model significantly improves the similarity of generated captions to true captions over the non-RAG approach. The marked difference in mean cosine similarity scores, supported by the highly significant p-value obtained from Welch's t-test, underscores the effectiveness of the RAG model in enhancing the quality and relevance of generated text.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
