@@ -33,7 +33,7 @@ This application showcases an innovative approach to visualizing Daniel's life t
 Run pip install requirements.txt in photo-rag-backend
 To run the backend, cd into photo-rag-backend and run 'flask run' in the terminal.
 To run the frontend, cd into photos-rag-frontend and run 'npm run build' followed by 'npm start' in the terminal.
-Visit http://localhost:3000/' in your browser.
+Visit 'http://localhost:3000/' in your browser.
 
 ## Usage
 
