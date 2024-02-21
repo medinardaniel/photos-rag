@@ -24,13 +24,22 @@ Ensure you have Python, Node.js, MongoDB, and an AWS account configured for S3 s
 
 ### Extracting and Processing Data
 
-1. Run `extract_data.ipynb` to import images from Daniel's computer.
-2. Use `generate_descriptions.ipynb` to generate image descriptions with GPT-4.
+1. `extract_data.ipynb` imported images from my local computer (including metadata)
+2. `generate_descriptions.ipynb` to generate image descriptions with GPT-4 vision model (preview version).
+3. `load_data.ipynb` embeds the image description (along with added metadata) and loads it to a MongoDB database.
 
 ### Database and Storage Setup
 
-1. Populate MongoDB collections: 'photo-embeddings' and 'photo-descriptions' with the output from the processing scripts.
+1. Populate MongoDB collections: 'photo-embeddings' (description vector embeddings) and 'photo-descriptions'  with the output from the processing scripts.
 2. Upload images to your AWS S3 bucket, noting their filenames.
+
+### Backend Data Pipeline
+- Get user query
+- Embed query
+- Get similar image descriptions from database using cosine similarity
+- Use image descriptions to generate captions (OpenAI’s GPT 3.5 Turbo)
+- Get signed URL (from AWS S3 bucket, where images are stored)
+- Return generated captions and signed URL to populate the frontend
 
 ### Running the Application
 
